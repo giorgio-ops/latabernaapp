@@ -1,0 +1,1362 @@
+2016-04-16 04:40:36 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: C:\wamp\www\api\api/assets' in C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('app\\assets\\AppA...')
+#10 C:\wamp\www\api\views\layouts\main.php(12): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(325): require('C:\\wamp\\www\\api...')
+#12 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\wamp\\www\\api...', Array)
+#13 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(392): yii\base\View->renderFile('C:\\wamp\\www\\api...', Array, Object(app\controllers\SiteController))
+#14 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\Controller->renderContent('<div class="sit...')
+#15 C:\wamp\www\api\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#16 [internal function]: app\controllers\SiteController->actionIndex()
+#17 C:\wamp\www\api\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#20 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#21 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#23 {main}
+2016-04-16 04:40:36 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54668'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/'
+    'PHP_SELF' => '/index.php/'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774436.6052
+    'REQUEST_TIME' => 1460774436
+]
+2016-04-16 04:40:46 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:40:46 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54669'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774446.7675
+    'REQUEST_TIME' => 1460774446
+]
+2016-04-16 04:41:34 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:41:34 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54670'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774494.857
+    'REQUEST_TIME' => 1460774494
+]
+2016-04-16 04:41:36 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:41:36 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54671'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774496.5598
+    'REQUEST_TIME' => 1460774496
+]
+2016-04-16 04:41:36 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:41:36 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54673'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774496.9278
+    'REQUEST_TIME' => 1460774496
+]
+2016-04-16 04:41:37 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:41:37 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54674'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774497.0906
+    'REQUEST_TIME' => 1460774497
+]
+2016-04-16 04:41:37 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:41:37 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54675'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774497.2427
+    'REQUEST_TIME' => 1460774497
+]
+2016-04-16 04:42:25 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:25 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54683'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774545.1686
+    'REQUEST_TIME' => 1460774545
+]
+2016-04-16 04:42:25 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:25 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54684'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774545.4418
+    'REQUEST_TIME' => 1460774545
+]
+2016-04-16 04:42:25 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:25 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54685'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774545.761
+    'REQUEST_TIME' => 1460774545
+]
+2016-04-16 04:42:25 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:25 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54686'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774545.9287
+    'REQUEST_TIME' => 1460774545
+]
+2016-04-16 04:42:26 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:26 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54687'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774546.082
+    'REQUEST_TIME' => 1460774546
+]
+2016-04-16 04:42:26 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:26 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54688'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774546.2301
+    'REQUEST_TIME' => 1460774546
+]
+2016-04-16 04:42:26 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:26 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54689'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774546.3731
+    'REQUEST_TIME' => 1460774546
+]
+2016-04-16 04:42:29 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:29 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54690'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carritos'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carritos'
+    'PHP_SELF' => '/index.php/v1/carritos'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774548.9985
+    'REQUEST_TIME' => 1460774548
+]
+2016-04-16 04:42:31 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:31 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54691'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carritos'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carritos'
+    'PHP_SELF' => '/index.php/v1/carritos'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774551.0177
+    'REQUEST_TIME' => 1460774551
+]
+2016-04-16 04:42:31 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:31 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54692'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carritos'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carritos'
+    'PHP_SELF' => '/index.php/v1/carritos'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774551.1927
+    'REQUEST_TIME' => 1460774551
+]
+2016-04-16 04:42:31 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:31 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54693'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carritos'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carritos'
+    'PHP_SELF' => '/index.php/v1/carritos'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774551.3665
+    'REQUEST_TIME' => 1460774551
+]
+2016-04-16 04:42:31 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:31 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54694'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carritos'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carritos'
+    'PHP_SELF' => '/index.php/v1/carritos'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774551.5161
+    'REQUEST_TIME' => 1460774551
+]
+2016-04-16 04:42:31 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:31 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54695'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carritos'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carritos'
+    'PHP_SELF' => '/index.php/v1/carritos'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'REQUEST_TIME_FLOAT' => 1460774551.6763
+    'REQUEST_TIME' => 1460774551
+]
+2016-04-16 04:42:50 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:42:50 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54700'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carritos'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carritos'
+    'PHP_SELF' => '/index.php/v1/carritos'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774570.0147
+    'REQUEST_TIME' => 1460774570
+]
+2016-04-16 04:42:53 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: C:\wamp\www\api\api/assets' in C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('app\\assets\\AppA...')
+#10 C:\wamp\www\api\views\layouts\main.php(12): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(325): require('C:\\wamp\\www\\api...')
+#12 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\wamp\\www\\api...', Array)
+#13 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(392): yii\base\View->renderFile('C:\\wamp\\www\\api...', Array, Object(app\api\modules\v1\controllers\DefaultController))
+#14 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\Controller->renderContent('<div class="api...')
+#15 C:\wamp\www\api\api\modules\v1\controllers\DefaultController.php(18): yii\base\Controller->render('index')
+#16 [internal function]: app\api\modules\v1\controllers\DefaultController->actionIndex()
+#17 C:\wamp\www\api\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#20 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('v1/', Array)
+#21 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#23 {main}
+2016-04-16 04:42:53 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54702'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/'
+    'PHP_SELF' => '/index.php/v1/'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774573.893
+    'REQUEST_TIME' => 1460774573
+]
+2016-04-16 04:43:00 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: C:\wamp\www\api\api/assets' in C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('app\\assets\\AppA...')
+#10 C:\wamp\www\api\views\layouts\main.php(12): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(325): require('C:\\wamp\\www\\api...')
+#12 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\wamp\\www\\api...', Array)
+#13 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(392): yii\base\View->renderFile('C:\\wamp\\www\\api...', Array, Object(app\controllers\SiteController))
+#14 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\Controller->renderContent('<div class="sit...')
+#15 C:\wamp\www\api\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#16 [internal function]: app\controllers\SiteController->actionIndex()
+#17 C:\wamp\www\api\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#20 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#21 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#23 {main}
+2016-04-16 04:43:00 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54703'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/'
+    'PHP_SELF' => '/index.php/'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774580.495
+    'REQUEST_TIME' => 1460774580
+]
+2016-04-16 04:43:05 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "api/".' in C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('api/', Array)
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#2 {main}
+2016-04-16 04:43:05 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54704'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/api/'
+    'PHP_SELF' => '/index.php/api/'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774585.0873
+    'REQUEST_TIME' => 1460774585
+]
+2016-04-16 04:43:13 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "api/v1/carritos".' in C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('api/v1/carritos', Array)
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#2 {main}
+2016-04-16 04:43:13 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54705'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/carritos'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/api/v1/carritos'
+    'PHP_SELF' => '/index.php/api/v1/carritos'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774593.4002
+    'REQUEST_TIME' => 1460774593
+]
+2016-04-16 04:43:16 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "api/v1/carrito".' in C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('api/v1/carrito', Array)
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#2 {main}
+2016-04-16 04:43:16 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54706'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/api/v1/carrito'
+    'PHP_SELF' => '/index.php/api/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774596.4389
+    'REQUEST_TIME' => 1460774596
+]
+2016-04-16 04:43:21 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\api\modules\v1\controllers\ActiveController' not found' in C:\wamp\www\api\api\modules\v1\controllers\CarritoController.php:5
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController()
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:43:21 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54707'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774601.9058
+    'REQUEST_TIME' => 1460774601
+]
+2016-04-16 04:44:16 [::1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\api\modules\v1\controllers\CarritoController' in file: C:\wamp\www\api/api/modules/v1/controllers/CarritoController.php. Namespace missing?' in C:\wamp\www\api\vendor\yiisoft\yii2\BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\api\\modules...')
+#1 [internal function]: spl_autoload_call('app\\api\\modules...')
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(562): class_exists('app\\api\\modules...')
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID('carrito')
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController('carrito')
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('v1/carrito')
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('v1/carrito', Array)
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#9 {main}
+2016-04-16 04:44:16 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54710'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/v1/carrito'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/v1/carrito'
+    'PHP_SELF' => '/index.php/v1/carrito'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460774656.5632
+    'REQUEST_TIME' => 1460774656
+]
+2016-04-16 05:17:11 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: C:\wamp\www\api\api/assets' in C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('app\\assets\\AppA...')
+#10 C:\wamp\www\api\views\layouts\main.php(12): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(325): require('C:\\wamp\\www\\api...')
+#12 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\wamp\\www\\api...', Array)
+#13 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(392): yii\base\View->renderFile('C:\\wamp\\www\\api...', Array, Object(app\controllers\SiteController))
+#14 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\Controller->renderContent('<div class="sit...')
+#15 C:\wamp\www\api\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#16 [internal function]: app\controllers\SiteController->actionIndex()
+#17 C:\wamp\www\api\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#20 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#21 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#23 {main}
+2016-04-16 05:17:11 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '55207'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/'
+    'PHP_SELF' => '/index.php/'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=ec541e65ef82f67fa700330474964027aeb2e172e52187dbba1de2cc1d2d5872a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229dvU_XcF3tsPPv8lfOrwP9wAw2Ot8izJ%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460776631.4922
+    'REQUEST_TIME' => 1460776631
+]
+2016-04-16 05:35:24 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory does not exist: C:\wamp\www\api\api/assets' in C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 C:\wamp\www\api\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 C:\wamp\www\api\vendor\yiisoft\yii2\di\Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 C:\wamp\www\api\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 C:\wamp\www\api\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 C:\wamp\www\api\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 C:\wamp\www\api\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('app\\assets\\AppA...')
+#10 C:\wamp\www\api\views\layouts\main.php(12): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(325): require('C:\\wamp\\www\\api...')
+#12 C:\wamp\www\api\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\wamp\\www\\api...', Array)
+#13 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(392): yii\base\View->renderFile('C:\\wamp\\www\\api...', Array, Object(app\controllers\SiteController))
+#14 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\Controller->renderContent('<div class="sit...')
+#15 C:\wamp\www\api\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#16 [internal function]: app\controllers\SiteController->actionIndex()
+#17 C:\wamp\www\api\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 C:\wamp\www\api\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 C:\wamp\www\api\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#20 C:\wamp\www\api\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#21 C:\wamp\www\api\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\wamp\www\api\api\index.php(13): yii\base\Application->run()
+#23 {main}
+2016-04-16 05:35:24 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'd6f86d9de03b44b0d6ff25e545e1ca25fb41e29f1ba200aea6ffde5b4308c2d1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"emfWCcWWFOisH5tGDKYGm1UxLXBs8RkG\";}'
+    'PHPSESSID' => 'nk0m7b48uv1dd078hrh3n8pn70'
+    'JSESSIONID' => 'wow9pywaonkj'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\wamp\\www\\api\\api'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '55814'
+    'SERVER_SOFTWARE' => 'PHP 5.5.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\wamp\\www\\api\\api\\index.php'
+    'PATH_INFO' => '/'
+    'PHP_SELF' => '/index.php/'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=d6f86d9de03b44b0d6ff25e545e1ca25fb41e29f1ba200aea6ffde5b4308c2d1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22emfWCcWWFOisH5tGDKYGm1UxLXBs8RkG%22%3B%7D; PHPSESSID=nk0m7b48uv1dd078hrh3n8pn70; JSESSIONID=wow9pywaonkj'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1460777724.0383
+    'REQUEST_TIME' => 1460777724
+]
