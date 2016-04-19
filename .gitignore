@@ -17,3 +17,6 @@ Thumbs.db
 
 # local phpunit config
 /phpunit.xml
+
+# Dev config
+config/db.php
