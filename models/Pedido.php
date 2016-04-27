@@ -83,6 +83,6 @@ class Pedido extends \yii\db\ActiveRecord
      */
     public function getIdFormapago0()
     {
-        return $this->hasOne(Formapago::className(), ['idFormapago' => 'idFormapago']);
+        return $this->hasOne(Formapago::className(), ['idFormapago' => 'descripcion']);
     }
 }
