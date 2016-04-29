@@ -18,6 +18,7 @@ $config = [
                     'class'  => 'yii\rest\UrlRule','controller'  => ['v1/direccion'],
                     'class'  => 'yii\rest\UrlRule','controller'  => ['v1/formapago'],
                     'class'  => 'yii\rest\UrlRule','controller'  => ['v1/pedido'],
+                    'class'  => 'yii\rest\UrlRule','controller'  => ['v1/sucursal'],
                 ]
             ],
         ],
