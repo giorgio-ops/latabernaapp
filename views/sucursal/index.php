@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\PedidoSearch */
+/* @var $searchModel app\models\SucursalSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Pedidos';
+$this->title = 'Sucursals';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="pedido-index">
+<div class="sucursal-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Pedido', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Sucursal', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -24,14 +24,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'idPedido',
-            'email:email',
-            'idCarrito',
-            'fecha',
-            'idDireccion',
-            // 'costoEnvio',
-            // 'idFormapago',
-            // 'idSucursal',
+            'idSucursal',
+            'codigo',
+            'ciudad',
+            'lugar',
+            'direccion',
+            // 'latitud',
+            // 'longitud',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

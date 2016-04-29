@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Pedido;
+use app\models\Sucursal;
 
 /**
- * PedidoSearch represents the model behind the search form about `app\models\Pedido`.
+ * SucursalSearch represents the model behind the search form about `app\models\Sucursal`.
  */
-class PedidoSearch extends Pedido
+class SucursalSearch extends Sucursal
 {
     /**
      * @inheritdoc
@@ -18,9 +18,8 @@ class PedidoSearch extends Pedido
     public function rules()
     {
         return [
-            [['idPedido', 'idCarrito', 'idDireccion', 'idFormapago', 'idSucursal'], 'integer'],
-            [['email', 'fecha'], 'safe'],
-            [['costoEnvio'], 'number'],
+            [['idSucursal'], 'integer'],
+            [['codigo', 'ciudad', 'lugar', 'direccion', 'latitud', 'longitud'], 'safe'],
         ];
     }
 
@@ -42,7 +41,7 @@ class PedidoSearch extends Pedido
      */
     public function search($params)
     {
-        $query = Pedido::find();
+        $query = Sucursal::find();
 
         // add conditions that should always apply here
 
@@ -60,16 +59,15 @@ class PedidoSearch extends Pedido
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'idPedido' => $this->idPedido,
-            'idCarrito' => $this->idCarrito,
-            'fecha' => $this->fecha,
-            'idDireccion' => $this->idDireccion,
-            'costoEnvio' => $this->costoEnvio,
-            'idFormapago' => $this->idFormapago,
             'idSucursal' => $this->idSucursal,
         ]);
 
-        $query->andFilterWhere(['like', 'email', $this->email]);
+        $query->andFilterWhere(['like', 'codigo', $this->codigo])
+            ->andFilterWhere(['like', 'ciudad', $this->ciudad])
+            ->andFilterWhere(['like', 'lugar', $this->lugar])
+            ->andFilterWhere(['like', 'direccion', $this->direccion])
+            ->andFilterWhere(['like', 'latitud', $this->latitud])
+            ->andFilterWhere(['like', 'longitud', $this->longitud]);
 
         return $dataProvider;
     }

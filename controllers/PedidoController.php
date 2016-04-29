@@ -51,12 +51,13 @@ class PedidoController extends Controller
      * @param integer $idCarrito
      * @param integer $idDireccion
      * @param integer $idFormapago
+     * @param integer $idSucursal
      * @return mixed
      */
-    public function actionView($idPedido, $email, $idCarrito, $idDireccion, $idFormapago)
+    public function actionView($idPedido, $email, $idCarrito, $idDireccion, $idFormapago, $idSucursal)
     {
         return $this->render('view', [
-            'model' => $this->findModel($idPedido, $email, $idCarrito, $idDireccion, $idFormapago),
+            'model' => $this->findModel($idPedido, $email, $idCarrito, $idDireccion, $idFormapago, $idSucursal),
         ]);
     }
 
@@ -70,7 +71,7 @@ class PedidoController extends Controller
         $model = new Pedido();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'idPedido' => $model->idPedido, 'email' => $model->email, 'idCarrito' => $model->idCarrito, 'idDireccion' => $model->idDireccion, 'idFormapago' => $model->idFormapago]);
+            return $this->redirect(['view', 'idPedido' => $model->idPedido, 'email' => $model->email, 'idCarrito' => $model->idCarrito, 'idDireccion' => $model->idDireccion, 'idFormapago' => $model->idFormapago, 'idSucursal' => $model->idSucursal]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -86,14 +87,15 @@ class PedidoController extends Controller
      * @param integer $idCarrito
      * @param integer $idDireccion
      * @param integer $idFormapago
+     * @param integer $idSucursal
      * @return mixed
      */
-    public function actionUpdate($idPedido, $email, $idCarrito, $idDireccion, $idFormapago)
+    public function actionUpdate($idPedido, $email, $idCarrito, $idDireccion, $idFormapago, $idSucursal)
     {
-        $model = $this->findModel($idPedido, $email, $idCarrito, $idDireccion, $idFormapago);
+        $model = $this->findModel($idPedido, $email, $idCarrito, $idDireccion, $idFormapago, $idSucursal);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'idPedido' => $model->idPedido, 'email' => $model->email, 'idCarrito' => $model->idCarrito, 'idDireccion' => $model->idDireccion, 'idFormapago' => $model->idFormapago]);
+            return $this->redirect(['view', 'idPedido' => $model->idPedido, 'email' => $model->email, 'idCarrito' => $model->idCarrito, 'idDireccion' => $model->idDireccion, 'idFormapago' => $model->idFormapago, 'idSucursal' => $model->idSucursal]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -109,11 +111,12 @@ class PedidoController extends Controller
      * @param integer $idCarrito
      * @param integer $idDireccion
      * @param integer $idFormapago
+     * @param integer $idSucursal
      * @return mixed
      */
-    public function actionDelete($idPedido, $email, $idCarrito, $idDireccion, $idFormapago)
+    public function actionDelete($idPedido, $email, $idCarrito, $idDireccion, $idFormapago, $idSucursal)
     {
-        $this->findModel($idPedido, $email, $idCarrito, $idDireccion, $idFormapago)->delete();
+        $this->findModel($idPedido, $email, $idCarrito, $idDireccion, $idFormapago, $idSucursal)->delete();
 
         return $this->redirect(['index']);
     }
@@ -126,12 +129,13 @@ class PedidoController extends Controller
      * @param integer $idCarrito
      * @param integer $idDireccion
      * @param integer $idFormapago
+     * @param integer $idSucursal
      * @return Pedido the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($idPedido, $email, $idCarrito, $idDireccion, $idFormapago)
+    protected function findModel($idPedido, $email, $idCarrito, $idDireccion, $idFormapago, $idSucursal)
     {
-        if (($model = Pedido::findOne(['idPedido' => $idPedido, 'email' => $email, 'idCarrito' => $idCarrito, 'idDireccion' => $idDireccion, 'idFormapago' => $idFormapago])) !== null) {
+        if (($model = Pedido::findOne(['idPedido' => $idPedido, 'email' => $email, 'idCarrito' => $idCarrito, 'idDireccion' => $idDireccion, 'idFormapago' => $idFormapago, 'idSucursal' => $idSucursal])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
