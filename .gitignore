@@ -24,3 +24,6 @@ config/db.php
 # Runtime
 runtime
 api/runtime
+
+# Error logs
+*error_log
