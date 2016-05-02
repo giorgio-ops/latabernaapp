@@ -20,3 +20,7 @@ Thumbs.db
 
 # Dev config
 config/db.php
+
+# Runtime
+runtime
+api/runtime
