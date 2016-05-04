@@ -16,21 +16,23 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'fecha')->textInput() ?>
 
-    <?= $form->field($model, 'seleccionCocktail')->dropDownList([ 1 => '1', 2 => '2', 3 => '3', 4 => '4', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'seleccionPaisaje')->dropDownList([ '0', '1', '2', '3', '4', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'seleccionColor')->dropDownList([ 1 => '1', 2 => '2', 3 => '3', 4 => '4', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'seleccionCocktail')->dropDownList([ '0', '1', '2', '3', '4', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'seleccionTransporte')->dropDownList([ 1 => '1', 2 => '2', 3 => '3', 4 => '4', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'seleccionColor')->dropDownList([ '0', '1', '2', '3', '4', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'seleccionHora')->dropDownList([ 1 => '1', 2 => '2', 3 => '3', 4 => '4', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'seleccionHora')->dropDownList([ '0', '1', '2', '3', '4', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'seleccionCompania')->dropDownList([ 1 => '1', 2 => '2', 3 => '3', 4 => '4', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'seleccionTransporte')->dropDownList([ '0', '1', '2', '3', '4', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'seleccion6')->dropDownList([ 1 => '1', 2 => '2', 3 => '3', 4 => '4', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'seleccionUso')->dropDownList([ '0', '1', '2', '3', '4', ], ['prompt' => '']) ?>
 
     <?= $form->field($model, 'latitud')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'longitud')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'estado')->dropDownList([ 'incompleto' => 'Incompleto', 'completo' => 'Completo', ], ['prompt' => '']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

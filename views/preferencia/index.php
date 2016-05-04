@@ -26,14 +26,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'email:email',
             'fecha',
+            'seleccionPaisaje',
             'seleccionCocktail',
             'seleccionColor',
-            'seleccionTransporte',
             // 'seleccionHora',
-            // 'seleccionCompania',
-            // 'seleccion6',
+            // 'seleccionTransporte',
+            // 'seleccionUso',
             // 'latitud',
             // 'longitud',
+            // 'estado',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -9,14 +9,15 @@ use Yii;
  *
  * @property string $email
  * @property string $fecha
+ * @property string $seleccionPaisaje
  * @property string $seleccionCocktail
  * @property string $seleccionColor
- * @property string $seleccionTransporte
  * @property string $seleccionHora
- * @property string $seleccionCompania
- * @property string $seleccion6
+ * @property string $seleccionTransporte
+ * @property string $seleccionUso
  * @property string $latitud
  * @property string $longitud
+ * @property string $estado
  */
 class Preferencia extends \yii\db\ActiveRecord
 {
@@ -34,9 +35,9 @@ class Preferencia extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email'], 'required'],
+            [['email', 'estado'], 'required'],
             [['fecha'], 'safe'],
-            [['seleccionCocktail', 'seleccionColor', 'seleccionTransporte', 'seleccionHora', 'seleccionCompania', 'seleccion6'], 'string'],
+            [['seleccionPaisaje', 'seleccionCocktail', 'seleccionColor', 'seleccionHora', 'seleccionTransporte', 'seleccionUso', 'estado'], 'string'],
             [['email', 'latitud', 'longitud'], 'string', 'max' => 45],
         ];
     }
@@ -49,14 +50,15 @@ class Preferencia extends \yii\db\ActiveRecord
         return [
             'email' => 'Email',
             'fecha' => 'Fecha',
+            'seleccionPaisaje' => 'Seleccion Paisaje',
             'seleccionCocktail' => 'Seleccion Cocktail',
             'seleccionColor' => 'Seleccion Color',
-            'seleccionTransporte' => 'Seleccion Transporte',
             'seleccionHora' => 'Seleccion Hora',
-            'seleccionCompania' => 'Seleccion Compania',
-            'seleccion6' => 'Seleccion6',
+            'seleccionTransporte' => 'Seleccion Transporte',
+            'seleccionUso' => 'Seleccion Uso',
             'latitud' => 'Latitud',
             'longitud' => 'Longitud',
+            'estado' => 'Estado',
         ];
     }
 }

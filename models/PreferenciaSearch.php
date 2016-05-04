@@ -18,7 +18,7 @@ class PreferenciaSearch extends Preferencia
     public function rules()
     {
         return [
-            [['email', 'fecha', 'seleccionCocktail', 'seleccionColor', 'seleccionTransporte', 'seleccionHora', 'seleccionCompania', 'seleccion6', 'latitud', 'longitud'], 'safe'],
+            [['email', 'fecha', 'seleccionPaisaje', 'seleccionCocktail', 'seleccionColor', 'seleccionHora', 'seleccionTransporte', 'seleccionUso', 'latitud', 'longitud', 'estado'], 'safe'],
         ];
     }
 
@@ -62,14 +62,15 @@ class PreferenciaSearch extends Preferencia
         ]);
 
         $query->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'seleccionPaisaje', $this->seleccionPaisaje])
             ->andFilterWhere(['like', 'seleccionCocktail', $this->seleccionCocktail])
             ->andFilterWhere(['like', 'seleccionColor', $this->seleccionColor])
-            ->andFilterWhere(['like', 'seleccionTransporte', $this->seleccionTransporte])
             ->andFilterWhere(['like', 'seleccionHora', $this->seleccionHora])
-            ->andFilterWhere(['like', 'seleccionCompania', $this->seleccionCompania])
-            ->andFilterWhere(['like', 'seleccion6', $this->seleccion6])
+            ->andFilterWhere(['like', 'seleccionTransporte', $this->seleccionTransporte])
+            ->andFilterWhere(['like', 'seleccionUso', $this->seleccionUso])
             ->andFilterWhere(['like', 'latitud', $this->latitud])
-            ->andFilterWhere(['like', 'longitud', $this->longitud]);
+            ->andFilterWhere(['like', 'longitud', $this->longitud])
+            ->andFilterWhere(['like', 'estado', $this->estado]);
 
         return $dataProvider;
     }

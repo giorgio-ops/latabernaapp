@@ -19,21 +19,23 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'fecha') ?>
 
+    <?= $form->field($model, 'seleccionPaisaje') ?>
+
     <?= $form->field($model, 'seleccionCocktail') ?>
 
     <?= $form->field($model, 'seleccionColor') ?>
 
-    <?= $form->field($model, 'seleccionTransporte') ?>
-
     <?php // echo $form->field($model, 'seleccionHora') ?>
 
-    <?php // echo $form->field($model, 'seleccionCompania') ?>
+    <?php // echo $form->field($model, 'seleccionTransporte') ?>
 
-    <?php // echo $form->field($model, 'seleccion6') ?>
+    <?php // echo $form->field($model, 'seleccionUso') ?>
 
     <?php // echo $form->field($model, 'latitud') ?>
 
     <?php // echo $form->field($model, 'longitud') ?>
+
+    <?php // echo $form->field($model, 'estado') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
